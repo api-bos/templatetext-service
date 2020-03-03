@@ -1,0 +1,5 @@
+com\bos\templatetext\model\TemplateText.class
+com\bos\templatetext\repository\TemplateTextRepository.class
+com\bos\templatetext\service\TemplateTextService.class
+com\bos\templatetext\controller\TemplateTextController.class
+com\bos\templatetext\TemplatetextApplication.class
