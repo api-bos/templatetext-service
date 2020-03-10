@@ -18,10 +18,10 @@ public class TemplateTextService {
         try{
             g_templateTextRepository.save(p_templateText);
 
-            l_output = new ResultEntity("Y", ErrorCode.B000);
+            l_output = new ResultEntity("Y", ErrorCode.BIT_000);
 
         }catch (Exception e){
-            l_output = new ResultEntity(e.toString(), ErrorCode.B999);
+            l_output = new ResultEntity(e.toString(), ErrorCode.BIT_999);
         }
 
         return l_output;
@@ -31,10 +31,10 @@ public class TemplateTextService {
         ResultEntity l_output;
 
         try{
-            l_output = new ResultEntity(g_templateTextRepository.getTemplateTextBySellerId(id_seller), ErrorCode.B000);
+            l_output = new ResultEntity(g_templateTextRepository.getTemplateTextBySellerId(id_seller), ErrorCode.BIT_000);
 
         }catch (Exception e){
-            l_output = new ResultEntity(e.toString(), ErrorCode.B999);
+            l_output = new ResultEntity(e.toString(), ErrorCode.BIT_999);
         }
 
         return l_output;
