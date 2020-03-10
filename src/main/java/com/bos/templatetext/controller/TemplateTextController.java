@@ -27,4 +27,9 @@ public class TemplateTextController {
     public ResultEntity editTemplateText(@RequestBody TemplateText p_templateText){
         return g_templateTextService.saveTemplateText(p_templateText);
     }
+
+    @DeleteMapping(value = "/templateText/{id_template_text}")
+    public ResultEntity deleteTemplateText(@PathVariable("id_template_text") int p_templateTextId){
+        return g_templateTextService.deleteTemplateText(p_templateTextId);
+    }
 }

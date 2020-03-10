@@ -39,4 +39,18 @@ public class TemplateTextService {
 
         return l_output;
     }
+
+    public ResultEntity deleteTemplateText(int p_templateTextId){
+        ResultEntity l_output;
+
+        try{
+            g_templateTextRepository.deleteById(p_templateTextId);
+            l_output = new ResultEntity("Y", ErrorCode.BIT_000);
+
+        }catch (Exception e){
+            l_output = new ResultEntity(e.toString(), ErrorCode.BIT_999);
+        }
+
+        return l_output;
+    }
 }
