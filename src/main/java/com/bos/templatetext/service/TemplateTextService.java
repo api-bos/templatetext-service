@@ -27,11 +27,24 @@ public class TemplateTextService {
         return l_output;
     }
 
-    public ResultEntity getTemplateText(int id_seller){
+    public ResultEntity getTemplateTextByName(int id_seller){
         ResultEntity l_output;
 
         try{
-            l_output = new ResultEntity(g_templateTextRepository.getTemplateTextBySellerId(id_seller), ErrorCode.BIT_000);
+            l_output = new ResultEntity(g_templateTextRepository.getTemplateTextNameBySellerId(id_seller), ErrorCode.BIT_000);
+
+        }catch (Exception e){
+            l_output = new ResultEntity(e.toString(), ErrorCode.BIT_999);
+        }
+
+        return l_output;
+    }
+
+    public ResultEntity getTemplateTextByDate(int id_seller){
+        ResultEntity l_output;
+
+        try{
+            l_output = new ResultEntity(g_templateTextRepository.getTemplateTextDateBySellerId(id_seller), ErrorCode.BIT_000);
 
         }catch (Exception e){
             l_output = new ResultEntity(e.toString(), ErrorCode.BIT_999);

@@ -13,9 +13,14 @@ public class TemplateTextController {
     @Autowired
     TemplateTextService g_templateTextService;
 
-    @GetMapping(value = "/templateText/{id_seller}")
-    public ResultEntity getTemplateText1(@PathVariable("id_seller") int id_seller){
-        return g_templateTextService.getTemplateText(id_seller);
+    @GetMapping(value = "/templateTextByName/{id_seller}")
+    public ResultEntity getTemplateTextByName(@PathVariable("id_seller") int id_seller){
+        return g_templateTextService.getTemplateTextByName(id_seller);
+    }
+
+    @GetMapping(value = "/templateTextByDate/{id_seller}")
+    public ResultEntity getTemplateTextByDate(@PathVariable("id_seller") int id_seller){
+        return g_templateTextService.getTemplateTextByDate(id_seller);
     }
 
     @PostMapping(value = "/templateText", consumes = "application/json")
