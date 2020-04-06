@@ -13,27 +13,27 @@ public class TemplateTextController {
     @Autowired
     TemplateTextService g_templateTextService;
 
-    @GetMapping(value = "/templateTextByName/{id_seller}")
+    @GetMapping(value = "/template-text-by-name/{id_seller}")
     public ResultEntity getTemplateTextByName(@PathVariable("id_seller") int id_seller){
         return g_templateTextService.getTemplateTextByName(id_seller);
     }
 
-    @GetMapping(value = "/templateTextByDate/{id_seller}")
+    @GetMapping(value = "/template-text-by-date/{id_seller}")
     public ResultEntity getTemplateTextByDate(@PathVariable("id_seller") int id_seller){
         return g_templateTextService.getTemplateTextByDate(id_seller);
     }
 
-    @PostMapping(value = "/templateText", consumes = "application/json")
+    @PostMapping(value = "/template-text", consumes = "application/json")
     public ResultEntity saveTemplateText(@RequestBody TemplateText p_templateText){
         return g_templateTextService.saveTemplateText(p_templateText);
     }
 
-    @PutMapping(value = "/templateText", consumes = "application/json")
+    @PutMapping(value = "/template-text", consumes = "application/json")
     public ResultEntity editTemplateText(@RequestBody TemplateText p_templateText){
         return g_templateTextService.saveTemplateText(p_templateText);
     }
 
-    @DeleteMapping(value = "/templateText/{id_template_text}")
+    @DeleteMapping(value = "/template-text/{id_template_text}")
     public ResultEntity deleteTemplateText(@PathVariable("id_template_text") int p_templateTextId){
         return g_templateTextService.deleteTemplateText(p_templateTextId);
     }
